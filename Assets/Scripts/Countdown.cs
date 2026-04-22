@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Countdown : MonoBehaviour
 {
@@ -32,6 +33,8 @@ public class Countdown : MonoBehaviour
                 DisplayTime(timeRemaining);
                 timerIsRunning = false;
                 Debug.Log("Time is up!");
+                int nextIndex = SceneManager.GetActiveScene().buildIndex + 1;
+                SceneManager.LoadScene(nextIndex);
             }
         }
     }
