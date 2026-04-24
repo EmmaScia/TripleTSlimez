@@ -1,7 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+<<<<<<< HEAD
 using UnityEngine;
 using TMPro;
+=======
+using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+>>>>>>> origin/EmmaBranch
 
 public class Countdown : MonoBehaviour
 {
@@ -10,15 +16,19 @@ public class Countdown : MonoBehaviour
     public TextMeshProUGUI timerText;
     private float timeRemaining = 5f;
     private bool timerIsRunning = false;
+<<<<<<< HEAD
     public GameObject zombieOne;
     public GameObject zombieTwo;
     public GameObject zombieThree;
 
+=======
+>>>>>>> origin/EmmaBranch
 
     private void Start()
     {
         timerIsRunning = true;
 
+<<<<<<< HEAD
         //zombies dissapear
         if (zombieOne != null)
         {
@@ -36,6 +46,8 @@ public class Countdown : MonoBehaviour
             zombieThree.SetActive(false);
         }
 
+=======
+>>>>>>> origin/EmmaBranch
     }
 
     void Update()
@@ -52,8 +64,14 @@ public class Countdown : MonoBehaviour
                 timeRemaining = 0;
                 DisplayTime(timeRemaining);
                 timerIsRunning = false;
+<<<<<<< HEAD
                 ActivateObject();
                 Debug.Log("Time is up!");
+=======
+                Debug.Log("Time is up!");
+                int nextIndex = SceneManager.GetActiveScene().buildIndex + 1;
+                SceneManager.LoadScene(nextIndex);
+>>>>>>> origin/EmmaBranch
             }
         }
     }
@@ -66,6 +84,7 @@ public class Countdown : MonoBehaviour
         timerText.text = timeToDisplay.ToString("F0");
     }
 
+<<<<<<< HEAD
     void ActivateObject()
     {
         //zombie One appearing
@@ -90,4 +109,6 @@ public class Countdown : MonoBehaviour
         }
     }
 
+=======
+>>>>>>> origin/EmmaBranch
 }
