@@ -14,8 +14,8 @@ public class Button : MonoBehaviour
     // Function to load the next scene by its build index
     public void LoadNextIndex()
     {
-        int nextIndex = SceneManager.GetActiveScene().buildIndex + 1;
-        SceneManager.LoadScene(nextIndex);
+       // int nextIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        SceneManager.LoadScene("Level 1");
     }
 
 
