@@ -62,15 +62,14 @@ public class Countdown : MonoBehaviour
             else
             {
                 timeRemaining = 0;
-                DisplayTime(timeRemaining);
+               // DisplayTime(timeRemaining);
                 timerIsRunning = false;
-//<<<<<<< HEAD
+
+                timerText.text = "Health:";
+                //<<<<<<< HEAD
                 ActivateObject();
                 Debug.Log("Time is up!");
-//=======
-                Debug.Log("Time is up!");
-                int nextIndex = SceneManager.GetActiveScene().buildIndex + 1;
-                SceneManager.LoadScene(nextIndex);
+//=======\
 //>>>>>>> origin/EmmaBranch
             }
         }
@@ -82,6 +81,7 @@ public class Countdown : MonoBehaviour
         timeToDisplay = Mathf.Clamp(timeToDisplay, 0, Mathf.Infinity);
         // Formats to 1 decimal place, e.g., "5.0"
         timerText.text = timeToDisplay.ToString("F0");
+
     }
 
 //<<<<<<< HEAD

@@ -3,18 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EndScreen : MonoBehaviour
+public class StartScreen : MonoBehaviour
 {
     // Start is called before the first frame update
-    public void Quit()
+    public void startGame()
     {
-        Debug.Log("Quit");
-        Application.Quit();
+        SceneManager.LoadScene("DirectionsScreen");
     }
 
     // Update is called once per frame
-    public void Restart()
-    {
-        SceneManager.LoadScene("StartScreen");
-    }
 }

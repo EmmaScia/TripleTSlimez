@@ -209,8 +209,9 @@ GameObject:
   - component: {fileID: 526086042}
   - component: {fileID: 526086044}
   - component: {fileID: 526086043}
+  - component: {fileID: 526086045}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: DirectionsPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -273,6 +274,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 526086041}
   m_CullTransparentMesh: 1
+--- !u!114 &526086045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526086041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b05552edc219a5047a1744444352b417, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,9 +660,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2031636546}
-        m_TargetAssemblyTypeName: Button, Assembly-CSharp
-        m_MethodName: LoadNextIndex
+      - m_Target: {fileID: 526086045}
+        m_TargetAssemblyTypeName: DirectionsScreen, Assembly-CSharp
+        m_MethodName: startLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
